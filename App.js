@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, FlatList, Text, Alert} from 'react-native';
+import {View, StyleSheet, FlatList, Alert} from 'react-native';
 import Header from './components/Header.js';
 import ListItem from './components/ListItem.js';
 import AddItem from './components/AddItem.js';
-// import 'react-native-get-random-values';
-// import {uuid} from 'uuidv4';
 
 const App = () => {
   const [items, setItems] = useState([
@@ -27,14 +25,13 @@ const App = () => {
   ]);
 
   const addItem = (text) => {
-		if(!text) {
-			Alert.alert('Error', 'Please enter an item', {text: 'OK'})
-		} else {
-			setItems((prevItems) => {
-				return [{id: Math.floor(Math.random() * 1000), text}, ...prevItems];
-			});
-		}
-		
+    if (!text) {
+      Alert.alert('Error', 'Please enter an item', {text: 'OK'});
+    } else {
+      setItems((prevItems) => {
+        return [{id: Math.floor(Math.random() * 1000), text}, ...prevItems];
+      });
+    }
   };
 
   const deleteItem = (id) => {
