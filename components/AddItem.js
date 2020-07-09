@@ -4,12 +4,12 @@ import {
   Text,
   StyleSheet,
   TextInput,
-  TouchableOpacity,
+	TouchableOpacity
 } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
-const AddItem = ({title, addItem}) => {
-  const [text, setText] = useState('');
+const AddItem = ({title, addItem}) => {	
+	const [text, setText] = useState('');
 
   const onChange = (textValue) => setText(textValue);
 
